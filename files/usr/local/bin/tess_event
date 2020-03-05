@@ -23,6 +23,5 @@ if  [[ ! -f $dbase || ! -r $dbase ]]; then
         exit 1
 fi
 
-export VIRTUAL_ENV={{ tessdb_venv_dir }}
-echo "{{ tessdb_venv_dir }}/bin/python3 -m tess_event -d ${dbase} ${flags}"
-{{ tessdb_venv_dir }}/bin/python3 -m tess_event -d ${dbase} ${flags}
+echo "python3 -m tess_event -d ${dbase} ${flags}"
+python3 -m tess_event -d ${dbase} ${flags}
